@@ -16,15 +16,16 @@ Training Flow per epoch:
   use only cps loss between predictions of model A and model B
   cps loss has a fixed weight (e.g. 0.001), and multiply this with the average dice score from the supervised training in this epoch
   
-# Final Accuracy Results
+## Final Accuracy Results:
 
-Data Split: 16 Labelled and 64 Unlabelled 3D MRIs
 Testing Method: Test with 48 unseen 3D MRIs, stride (18,18,4)
 
-## Models
-### A. Baseline (only 16 Labelled 3D MRIs, without CPS)
-### B. CPS 
-### C .CPS with Adaptive Loss Weight
+### Models:
+#### A. Baseline (only 16 Labelled 3D MRIs, without CPS)
+#### B. CPS (16 Labelled and 64 Unlabelled 3D MRIs)
+#### C. CPS with Adaptive Loss Weight (16 Labelled and 64 Unlabelled 3D MRIs)
+
+### Results:
 
 |Model|Dice Accuracy (%)|Jaccard (%)|Average Surface Distance|95 Hausdorff Distance|
 |-----|-----|-----|-----|-----|
@@ -33,3 +34,5 @@ Testing Method: Test with 48 unseen 3D MRIs, stride (18,18,4)
 |**C**|**88.4**|**79.5**|**2.91**|**9.56**|
 
 Using our proposed Adaptive Weight Loss can increase the final model test accuracy. 
+
+Original Cross Pseudo Supervision Paper: https://arxiv.org/abs/2106.01226
