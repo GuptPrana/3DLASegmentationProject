@@ -21,20 +21,15 @@ Training Flow per epoch:
 Data Split: 16 Labelled and 64 Unlabelled 3D MRIs
 Testing Method: Test with 48 unseen 3D MRIs, stride (18,18,4)
 
-### Baseline (only 16 Labelled 3D MRIs, without CPS)
-78.3
-69.0
-22.5
-9.88
+## Models
+### A. Baseline (only 16 Labelled 3D MRIs, without CPS)
+### B. CPS 
+### C .CPS with Adaptive Loss Weight
 
-### CPS 
-86.4
-76.6
-3.42
-12.1
+|Model|Dice Accuracy (%)|Jaccard (%)|Average Surface Distance|95 Hausdorff Distance|
+|-----|-----|-----|-----|-----|
+|A|78.3|69.0|22.5|9.88|
+|B|86.4|76.6|3.42|12.1|
+|**C**|**88.4**|**79.5**|**2.91**|**9.56**|
 
-### CPS with Adaptive Loss Weight
-88.4
-79.5
-2.91
-9.56
+Using our proposed Adaptive Weight Loss can increase the final model test accuracy. 
