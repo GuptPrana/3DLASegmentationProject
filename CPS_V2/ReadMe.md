@@ -16,3 +16,25 @@ Training Flow per epoch:
   use only cps loss between predictions of model A and model B
   cps loss has a fixed weight (e.g. 0.001), and multiply this with the average dice score from the supervised training in this epoch
   
+# Final Accuracy Results
+
+Data Split: 16 Labelled and 64 Unlabelled 3D MRIs
+Testing Method: Test with 48 unseen 3D MRIs, stride (18,18,4)
+
+### Baseline (only 16 Labelled 3D MRIs, without CPS)
+78.3
+69.0
+22.5
+9.88
+
+### CPS 
+86.4
+76.6
+3.42
+12.1
+
+### CPS with Adaptive Loss Weight
+88.4
+79.5
+2.91
+9.56
